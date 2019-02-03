@@ -1,12 +1,40 @@
 {
-	"menu" : {
-		"main": {
-			"name": "Главная",
-      "link": "javascript:void(0)"
+	"cards" : {
+		"card_1": {
+      "id": "card-1",
+      "color": "blue",
+			"taste": "с фуа-гра",
+      "set": {
+        "item_1" : "10 порций",
+        "item_2" : "Мышь в подарок"
+      },
+      "size" : "0,5",
+      "description": "Печень утки разварная с артишоками."
 		},
-		"functions": {
-			"name": "Внутренняя",
-      "link": "javascript:void(0)"
+		"card_2": {
+      "id": "card-2",
+      "color": "pink",
+			"taste": "с рыбой",
+      "set": {
+        "item_1" : "40 порций",
+        "item_2" : "2 мыши в подарок"
+      },
+      "size" : "2",
+      "selected": "true",
+      "description": "Головы щучьи с чесноком да свежайшая сёмгушка."
+		},
+		"card_3": {
+      "id": "card-3",
+      "color": "blue",
+			"taste": "с курой",
+      "set": {
+        "item_1" : "100 порций",
+        "item_2" : "5 мышей в подарок",
+        "item_3" : "Заказчик доволен"
+      },
+      "size" : "5",
+      "disabled" : "true",
+      "description": "Филе из цыплят с трюфелями в бульоне."
 		}
   }
 }

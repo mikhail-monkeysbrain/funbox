@@ -1,0 +1,45 @@
+.cards
+  .cards--heading 
+    | Ты сегодня покормил кота?
+  each item in cards
+    if item.disabled
+      input(type="checkbox" class='checkbox checkbox__' + item.color id= item.id name="cards" disabled)
+    else if item.selected
+      input(type="checkbox" class='checkbox checkbox__' + item.color id= item.id name="cards" checked)
+    else
+      input(type="checkbox" class='checkbox checkbox__' + item.color id= item.id name="cards")
+    label(class= 'card--border card__' +  item.color for= item.id)
+      .card
+        .card--content
+          img(src="./dist/img/content/cat.png", alt="cat").card--img
+          .card--description 
+            .card--description--inner.card--description__default
+              | Сказочное заморское яство
+            .card--description--inner.card--description__selected-hover
+              | Котэ не одобряет?
+          .card--heading
+            | Нямушка
+            span.card--heading__taste 
+              = item.taste
+          .card--set
+            each set in item.set
+              span.card--set--item 
+                = set
+          .card--size
+            = item.size
+            span.card--size__weight кг
+      if item.disabled
+        .card--after
+          span.card--after__disabled
+            | Печалька&nbsp;
+            = item.taste
+            | &nbsp;закончился
+      else
+        .card--after
+          span.card--after--inner.card--after__default
+            | Чего сидишь? Порадуй котэ, 
+            a(href="?card-2").card--buy купи
+            span.__blue .
+            //Я не виноват! Так было в макете =)
+          span.card--after--inner.card--after__selected
+            = item.description

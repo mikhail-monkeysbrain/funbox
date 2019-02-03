@@ -3,16 +3,24 @@
 *
   box-sizing border-box
   -webkit-tap-highlight-color transparent
+  backface-visibility: hidden
 
 body
   font 16px/1.5 $mainFont
-  overflow-x: hidden
+  background $gradient, url('../img/styles/pattern.jpg') center repeat
+  min-height 100vh
+  display flex
+  justify-content center
+  align-items center
 
 a,
 button,
 input
   &:focus
     outline 0
+
+p
+  margin 0
 
 a
   text-decoration none
@@ -34,3 +42,6 @@ figure
 
 .grid
   min-height: $gridHeight
+
+.__blue
+  color $blue /*Я не виноват! Так было в макете =)*/

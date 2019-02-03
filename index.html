@@ -4,27 +4,84 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>FrontPage</title>
+    <title>Нямушка</title>
     <link rel="stylesheet" href="dist/css/main.css"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="./dist/favicon/apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="./dist/favicon/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="./dist/favicon/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="./dist/favicon/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="./dist/favicon/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="./dist/favicon/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="./dist/favicon/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="./dist/favicon/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="./dist/favicon/apple-icon-180x180.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="./dist/favicon/android-icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="./dist/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="./dist/favicon/favicon-96x96.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="./dist/favicon/favicon-16x16.png"/>
+    <link rel="manifest" href="./dist/favicon/manifest.json"/>
+    <meta name="msapplication-TileColor" content="#ffffff"/>
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"/>
+    <meta name="theme-color" content="#ffffff"/>
   </head>
   <body>
-    <header class="header">
-      <h2>header</h2>
-      <div class="header-container">
-        <nav class="header-nav"><a href="javascript:void(0)">Главная</a><a href="javascript:void(0)">Внутренняя</a>
-        </nav>
-      </div>
-    </header>
-    <main class="grid">
-      <h2>main</h2>
-    </main>
-    <footer class="footer">
-      <h2>footer</h2>
-      <div class="footer-container">
-        <nav class="footer-nav"><a class="footer-nav--item jsAncor" href="javascript:void(0)">Главная</a><a class="footer-nav--item jsAncor" href="javascript:void(0)">Внутренняя</a>
-        </nav>
-      </div>
-    </footer>
+    <div class="cards">
+      <div class="cards--heading">
+         Ты сегодня покормил кота?</div>
+      <input class="checkbox checkbox__blue" type="checkbox" id="card-1" name="cards"/>
+      <label class="card--border card__blue" for="card-1">
+        <div class="card">
+          <div class="card--content"><img class="card--img" src="./dist/img/content/cat.png" alt="cat"/>
+            <div class="card--description"> 
+              <div class="card--description--inner card--description__default">Сказочное заморское яство</div>
+              <div class="card--description--inner card--description__selected-hover">Котэ не одобряет?</div>
+            </div>
+            <div class="card--heading">Нямушка<span class="card--heading__taste"> с фуа-гра</span></div>
+            <div class="card--set"><span class="card--set--item"> 10 порций</span><span class="card--set--item"> Мышь в подарок</span>
+            </div>
+            <div class="card--size">0,5<span class="card--size__weight">кг</span>
+            </div>
+          </div>
+        </div>
+        <div class="card--after"><span class="card--after--inner card--after__default">Чего сидишь? Порадуй котэ, <a class="card--buy" href="?card-2">купи</a><span class="__blue">.</span>
+            <!--Я не виноват! Так было в макете =)--></span><span class="card--after--inner card--after__selected">Печень утки разварная с артишоками.</span></div>
+      </label>
+      <input class="checkbox checkbox__pink" type="checkbox" id="card-2" name="cards" checked="checked"/>
+      <label class="card--border card__pink" for="card-2">
+        <div class="card">
+          <div class="card--content"><img class="card--img" src="./dist/img/content/cat.png" alt="cat"/>
+            <div class="card--description"> 
+              <div class="card--description--inner card--description__default">Сказочное заморское яство</div>
+              <div class="card--description--inner card--description__selected-hover">Котэ не одобряет?</div>
+            </div>
+            <div class="card--heading">Нямушка<span class="card--heading__taste"> с рыбой</span></div>
+            <div class="card--set"><span class="card--set--item"> 40 порций</span><span class="card--set--item"> 2 мыши в подарок</span>
+            </div>
+            <div class="card--size">2<span class="card--size__weight">кг</span>
+            </div>
+          </div>
+        </div>
+        <div class="card--after"><span class="card--after--inner card--after__default">Чего сидишь? Порадуй котэ, <a class="card--buy" href="?card-2">купи</a><span class="__blue">.</span>
+            <!--Я не виноват! Так было в макете =)--></span><span class="card--after--inner card--after__selected">Головы щучьи с чесноком да свежайшая сёмгушка.</span></div>
+      </label>
+      <input class="checkbox checkbox__blue" type="checkbox" id="card-3" name="cards" disabled="disabled"/>
+      <label class="card--border card__blue" for="card-3">
+        <div class="card">
+          <div class="card--content"><img class="card--img" src="./dist/img/content/cat.png" alt="cat"/>
+            <div class="card--description"> 
+              <div class="card--description--inner card--description__default">Сказочное заморское яство</div>
+              <div class="card--description--inner card--description__selected-hover">Котэ не одобряет?</div>
+            </div>
+            <div class="card--heading">Нямушка<span class="card--heading__taste"> с курой</span></div>
+            <div class="card--set"><span class="card--set--item"> 100 порций</span><span class="card--set--item"> 5 мышей в подарок</span><span class="card--set--item"> Заказчик доволен</span>
+            </div>
+            <div class="card--size">5<span class="card--size__weight">кг</span>
+            </div>
+          </div>
+        </div>
+        <div class="card--after"><span class="card--after__disabled">Печалька&nbsp;с курой&nbsp;закончился</span></div>
+      </label>
+    </div>
     <script src="dist/js/app.js"></script>
   </body>
 </html>

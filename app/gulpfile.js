@@ -30,7 +30,7 @@ gulp.task('stylus', () => {
         'include css': true
     }))
     .pipe(gp.autoprefixer({
-        browsers: ['last 3 versions'],
+        browsers: ['last 3 versions', 'not ie < 11'],
         cascade: false
     }))
     .on('error', gp.notify.onError({
@@ -94,6 +94,11 @@ gulp.task('fonts', () =>
         .pipe(gulp.dest('../dist/fonts/'))
 );
 
+gulp.task('favicon', () =>
+    gulp.src('static/favicon/**/*.*')
+        .pipe(gulp.dest('../dist/favicon/'))
+);
+
 gulp.task('watch', () => {
     gulp.watch('pug/**/*.pug', gulp.series('pug'))
     gulp.watch('data/data,json', gulp.series('pug'))
@@ -103,9 +108,8 @@ gulp.task('watch', () => {
 });
 
 gulp.task('default', gulp.series(
-    gulp.parallel('pug', 'stylus', 'scripts', 'fonts', 'img:dev'),
-    gulp.parallel('watch', 'serve'),
-    
+    gulp.parallel('pug', 'stylus', 'scripts', 'fonts', 'favicon', 'img:dev'),
+    gulp.parallel('watch', 'serve')
 ));
 
 gulp.task('build', gulp.series(
@@ -114,5 +118,6 @@ gulp.task('build', gulp.series(
     'scripts',
     'fonts',
     'img:build',
+    'favicon',
     'sprite'
 ));

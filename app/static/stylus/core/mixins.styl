@@ -1,5 +1,4 @@
 @import '../core/variables.styl';
-@import '../sprite/sprite.styl';
 
 // Mixins
 //
@@ -99,7 +98,6 @@ sr()
 
 container($width = $widthContent)
   max-width: $width
-  padding 0 20px
   margin: 0 auto
 
 // Генерация спрайтов
@@ -121,3 +119,10 @@ sprite($sprite)
     spritePosition($sprite)
     spriteWidth($sprite)
     spriteHeight($sprite)
+
+gradientCard($deg, $angle, $color)
+  background: linear-gradient($deg, transparent $angle, $color 0)
+
+media(maxWidth)
+	@media screen and (max-width: maxWidth)
+		{block}
